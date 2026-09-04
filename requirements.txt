@@ -1,0 +1,47 @@
+# Bay of Bengal Oxygen Depletion Research -- dependencies
+#
+# Covers the grid/ensemble pipeline, the 14-analysis deoxygenation study, the
+# yearly-map/zone-volume notebook, and the driver-attribution notebook. Some
+# packages are only needed for one section -- see the inline comments.
+
+numpy>=1.26
+pandas>=2.1
+xarray>=2024.1
+netCDF4>=1.6
+scipy>=1.11
+matplotlib>=3.8
+
+# Boundary clipping / regridding (pipeline)
+geopandas>=0.14
+shapely>=2.0
+pyproj>=3.6
+
+# Kriging interpolation (grid/ensemble notebook, section 10; yearly-maps notebook, section 14)
+pykrige>=1.7
+
+# Excel export with merged header cells (yearly-maps notebook, section 16)
+openpyxl>=3.1
+
+# 14-analysis deoxygenation study
+pymannkendall>=1.4      # modified (seasonal, autocorrelation-corrected) Mann-Kendall trend test
+ruptures>=1.1            # change-point detection
+tensorly>=0.8             # CP/Tucker tensor decomposition
+eofs>=1.4                  # empirical orthogonal function analysis
+PyWavelets>=1.4            # wavelet analysis (import name: pywt)
+scikit-gstat>=1.0          # semivariogram analysis
+esda>=2.5                  # Moran's I / spatial autocorrelation
+libpysal>=4.9               # spatial weights (esda dependency)
+gsw>=3.6                     # TEOS-10 seawater properties (mixed-layer depth, buoyancy frequency)
+scikit-learn>=1.3
+pycwt>=0.3.0a22                # continuous wavelet transform cross-check
+
+# Driver-attribution notebook (gradient boosting + SHAP + GAM)
+catboost>=1.2
+lightgbm>=4.1
+xgboost>=2.0
+shap>=0.44
+pygam>=0.9
+
+# notebook support
+jupyter>=1.0
+ipykernel>=6.29

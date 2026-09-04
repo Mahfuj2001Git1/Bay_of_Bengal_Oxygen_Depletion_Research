@@ -1,0 +1,19 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Raw source data (large; see data/README.md for how to obtain it)
+*.nc
+G4D_DOC_*
+GLOBAL_DO_*
+GLODAPv2*.csv
+GLODAPv3/
+
+# Large regenerable pipeline outputs
+outputs/
+
+# Local environment
+.venv/
+venv/
+.DS_Store
